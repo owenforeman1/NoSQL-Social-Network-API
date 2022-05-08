@@ -3,10 +3,8 @@ const moment = require("moment");
 
 const reactionSchema = new Schema({
   reactionId: {
-    type: String,
-    required: true,
-    minlength: 1,
-    maxlength: 280,
+    type: Schema.Types.ObjectId,
+    default: () => new Types.ObjectId()
   },
   reactionBody: {
     type: String,
