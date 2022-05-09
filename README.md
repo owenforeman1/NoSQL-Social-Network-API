@@ -2,9 +2,9 @@
 
 ## Description
 
-I wanted to create the backend for a social network app. This was created with Mongodb and stores users, thoughts and reactions. I learned a lot about mongo and backend for apps. 
+I wanted to create the backend for a social network app. This was created with Mongodb and stores users, thoughts and reactions. I learned a lot about mongo and backend for apps. I struggled with contollers but this app helped me a lot and I understand them much more now.
 
-## Table of Contents (Optional)
+## Table of Contents 
 
 If your README is long, add a table of contents to make it easy for users to find what they need.
 
@@ -19,13 +19,9 @@ Npm install then node server.js.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+![](assets/Untitled_-May-9_-2022-6_56-PM.gif)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Watch video here => https://drive.google.com/file/d/10QqUKhuF1kF0ek02osvsck-JR8W99ir0/view
 
 ## License
 
