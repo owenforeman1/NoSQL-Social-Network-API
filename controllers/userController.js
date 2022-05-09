@@ -39,23 +39,13 @@ module.exports = {
       });
   },
   deleteUserById(req, res) {
-    User.findOneAndRemove({ _id: req.params.userId })
+    User.findOneAndDelete({ _id: req.params.userId })
       .then((user) =>
         !user
-          ? res.status(404).json({ message: "No user with this id" })
-          : User.findOneAndUpdate(
-              { users: req.params.userId },
-              { $pull: { users: req.params.userId } },
-              { new: true }
-            )
+          ? res.status(404).json({ message: "No user with that ID" })
+          : Thought.deleteMany({ _id: { $in: user.thoughts } })
       )
-      .then((user) =>
-        !user
-          ? res.status(404).json({
-              message: "User created but no user with this id",
-            })
-          : res.json({ message: "User successfully deleted" })
-      )
+      .then(() => res.json({ message: "User and associated thoughts deleted!" }))
       .catch((err) => res.status(500).json(err));
   },
   addFriend(req, res) {
