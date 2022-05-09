@@ -31,7 +31,8 @@ const userSchema = new Schema({
       ref: "User",
     },
   ],
-  toJson: {
+}, {
+  toJSON: {
     virtuals: true,
   },
   id: false,

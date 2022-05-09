@@ -20,7 +20,8 @@ const reactionSchema = new Schema({
     default: Date.now,
     get: (createdAt) => moment(createdAt).format("MMMM Do YYYY, h:mm:ss a"),
   },
-  toJson: {
+}, {
+  toJSON: {
     getters: true,
   },
   id: false,
