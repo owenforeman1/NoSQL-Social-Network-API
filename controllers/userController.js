@@ -1,7 +1,7 @@
-const res = require("express/lib/response");
-const { User } = require("../models");
 
-const userController = {
+const { User, Thought } = require("../models");
+
+module.exports = {
   getAllUsers(req, res) {
     User.find()
       .then((users) => res.json(users))
